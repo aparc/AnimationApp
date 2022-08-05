@@ -20,7 +20,7 @@ class AnimationViewController: UIViewController {
 	@IBOutlet var delayLabel: UILabel!
 	
 	// MARK: - Private Properties
-	private var nextAnimation: Animation = AnimationService.shared.getAnimation()
+	private var nextAnimation: Animation = AnimationService.shared.randomAnimation()
 	
 	// MARK: - Life Cycle Methods
 	override func viewDidLoad() {
@@ -32,7 +32,7 @@ class AnimationViewController: UIViewController {
 	@IBAction func runButtonPressed(_ sender: UIButton) {
 		animateView()
 		updateLabels()
-		nextAnimation = AnimationService.shared.getAnimation()
+		nextAnimation = AnimationService.shared.randomAnimation()
 		sender.setTitle("Run \(nextAnimation.preset)", for: .normal)
 	}
 	

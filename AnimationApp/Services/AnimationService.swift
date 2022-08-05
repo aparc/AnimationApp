@@ -13,7 +13,7 @@ class AnimationService {
 	
 	private init() {}
 	
-	func getAnimation() -> Animation {
+	func randomAnimation() -> Animation {
 		Animation(
 			preset: AnimationPreset.allCases.randomElement() ?? AnimationPreset.morph,
 			curve: AnimationCurve.allCases.randomElement() ?? AnimationCurve.easeIn,
