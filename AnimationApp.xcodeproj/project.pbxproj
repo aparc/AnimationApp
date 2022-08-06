@@ -14,7 +14,7 @@
 		49748A76289C6BAC00482DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49748A75289C6BAC00482DFC /* Assets.xcassets */; };
 		49748A79289C6BAC00482DFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49748A77289C6BAC00482DFC /* LaunchScreen.storyboard */; };
 		49748A82289C857300482DFC /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 49748A81289C857300482DFC /* SpringAnimation */; };
-		49748A89289D9B6E00482DFC /* AnimationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49748A88289D9B6E00482DFC /* AnimationService.swift */; };
+		49748A89289D9B6E00482DFC /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49748A88289D9B6E00482DFC /* DataStore.swift */; };
 		49748A8C289D9CEB00482DFC /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49748A8B289D9CEB00482DFC /* Animation.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		49748A75289C6BAC00482DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49748A78289C6BAC00482DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49748A7A289C6BAC00482DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49748A88289D9B6E00482DFC /* AnimationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationService.swift; sourceTree = "<group>"; };
+		49748A88289D9B6E00482DFC /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		49748A8B289D9CEB00482DFC /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +110,7 @@
 		49748A87289D9B5C00482DFC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				49748A88289D9B6E00482DFC /* AnimationService.swift */,
+				49748A88289D9B6E00482DFC /* DataStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			files = (
 				49748A71289C6BAB00482DFC /* AnimationViewController.swift in Sources */,
 				49748A6D289C6BAB00482DFC /* AppDelegate.swift in Sources */,
-				49748A89289D9B6E00482DFC /* AnimationService.swift in Sources */,
+				49748A89289D9B6E00482DFC /* DataStore.swift in Sources */,
 				49748A8C289D9CEB00482DFC /* Animation.swift in Sources */,
 				49748A6F289C6BAB00482DFC /* SceneDelegate.swift in Sources */,
 			);

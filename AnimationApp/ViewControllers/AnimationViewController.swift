@@ -12,34 +12,29 @@ class AnimationViewController: UIViewController {
 
 	// MARK: - IB Outlets
 	@IBOutlet var animatableView: SpringView!
-	
-	@IBOutlet var presetLabel: UILabel!
-	@IBOutlet var curveLabel: UILabel!
-	@IBOutlet var forceLabel: UILabel!
-	@IBOutlet var durationLabel: UILabel!
-	@IBOutlet var delayLabel: UILabel!
+	@IBOutlet var animationAttributesLabel: UILabel!
 	
 	// MARK: - Private Properties
-	private var nextAnimation: Animation = AnimationService.shared.randomAnimation()
+	private var nextAnimation = Animation.randomAnimation()
 	
 	// MARK: - Life Cycle Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		updateLabels()
+		updateAnimationlabel()
 	}
 
 	// MARK: - IB Actions
 	@IBAction func runButtonPressed(_ sender: UIButton) {
 		animateView()
-		updateLabels()
-		nextAnimation = AnimationService.shared.randomAnimation()
+		updateAnimationlabel()
+		nextAnimation = Animation.randomAnimation()
 		sender.setTitle("Run \(nextAnimation.preset)", for: .normal)
 	}
 	
 	// MARK: - Private Methods
 	private func animateView() {
-		animatableView.animation = nextAnimation.preset.rawValue
-		animatableView.curve = nextAnimation.curve.rawValue
+		animatableView.animation = nextAnimation.preset
+		animatableView.curve = nextAnimation.curve
 		animatableView.force = nextAnimation.force
 		animatableView.duration = nextAnimation.duration
 		animatableView.delay = nextAnimation.delay
@@ -47,12 +42,8 @@ class AnimationViewController: UIViewController {
 		animatableView.animate()
 	}
 	
-	private func updateLabels() {
-		presetLabel.text = "preset: \(nextAnimation.preset)"
-		curveLabel.text = "curve: \(nextAnimation.curve)"
-		forceLabel.text = String(format: "force: %.2f", nextAnimation.force)
-		durationLabel.text = String(format: "duration: %.2f", nextAnimation.duration)
-		delayLabel.text = String(format: "delay: %.2f", nextAnimation.delay)
+	private func updateAnimationlabel() {
+		animationAttributesLabel.text = nextAnimation.description
 	}
 	
 }
